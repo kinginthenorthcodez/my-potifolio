@@ -70,13 +70,14 @@ nav.navbar.scrolled{
   padding: 0px 0;
   background-color: #121212;
 }
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
 nav.navbar a.navbar-brand{
-  width: 9%;
+  width: 12%;
+}
+
+nav.navbar a.navbar-brand img {
+  width: 105px;
+  border-radius: 50%;
 }
 
 nav.navbar .navbar-nav .nav-link.navbar-link {
@@ -609,8 +610,12 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 .footer img {
-  width: 26%;
+  margin-top: 5%;
+  width: 24%;
+  border-radius: 50%;
 }
+
+
 
 .footer p {
   font-weight: 400;

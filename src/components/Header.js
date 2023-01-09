@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import { ArrowRightCircle } from 'react-bootstrap-icons';
 import headerImg from '../assets/img/header-img.svg';
+import 'animate.css';
+import TrackVisibility from 'react-on-screen';
 
 const Header = () => {
   const toRotate = [
@@ -54,17 +56,26 @@ const Header = () => {
       <Container>
         <Row className='align-items-center'>
           <Col xs={12} xm={6} xl={7}>
-            <span className='tagline'>Kinginthenorthcodez greets you!</span>
-            <h1 className='txt-rotate '>
-              Hi, I'm a <span className='wrap'>{text}</span>
-            </h1>
-            <p>
-              🚀 🌍 I love everything binary and asynchronous plus huge interest
-              in climate change. Open to new job opportunities.
-            </p>
-            <button onClick={() => console.log('lets connect')}>
-              Let's Connect <ArrowRightCircle color='orangered' size={24} />
-            </button>
+            <TrackVisibility>
+              {({ isVisible }) => (
+                <div className={isVisible ? 'animate__animated' : ''}>
+                  <span className='tagline'>
+                    Kinginthenorthcodez greets you!
+                  </span>
+                  <h1 className='txt-rotate '>
+                    Hi, I'm a <span className='wrap'>{text}</span>
+                  </h1>
+                  <p>
+                    🚀 🌍 I love everything binary and asynchronous plus huge
+                    interest in climate change. Open to new job opportunities.
+                  </p>
+                  <button onClick={() => console.log('lets connect')}>
+                    Let's Connect{' '}
+                    <ArrowRightCircle color='orangered' size={24} />
+                  </button>
+                </div>
+              )}
+            </TrackVisibility>
           </Col>
           <Col xs={12} md={6} xl={5}>
             <img src={headerImg} alt='header-img' />
