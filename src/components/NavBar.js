@@ -3,7 +3,7 @@ import { Navbar, Container } from 'react-bootstrap';
 import { Nav } from 'react-bootstrap';
 import logo from '../assets/img/logo.svg';
 import navIcon1 from '../assets/img/nav-icon1.svg';
-import navIcon2 from '../assets/img/nav-icon2.svg';
+import navIcon2 from '../assets/img/nav-icon4.svg';
 import navIcon3 from '../assets/img/nav-icon3.svg';
 
 const NavBar = () => {
@@ -73,13 +73,13 @@ const NavBar = () => {
           <span className='navbar-text'>
             <div className='social-icon'>
               <a href='#'>
-                <img src={navIcon1} alt='icon' />
+                <img src={navIcon1} alt='social icon' />
               </a>
               <a href='#'>
-                <img src={navIcon2} alt='icon' />
+                <img src={navIcon2} alt='social icon' />
               </a>
               <a href='#'>
-                <img src={navIcon3} alt='icon' />
+                <img src={navIcon3} alt='social icon' />
               </a>
             </div>
             <button className='vvd' onClick={() => console.log('Lets connect')}>
