@@ -69,7 +69,7 @@ const Header = () => {
                     🚀 🌍 I love everything binary and asynchronous plus huge
                     interest in climate change. Open to new job opportunities.
                   </p>
-                  <button onClick={() => console.log('lets connect')}>
+                  <button onClick={() => (window.location.href = '#contact')}>
                     Let's Connect{' '}
                     <ArrowRightCircle color='orangered' size={24} />
                   </button>

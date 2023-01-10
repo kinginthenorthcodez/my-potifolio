@@ -12,7 +12,7 @@ const NavBar = () => {
 
   useEffect(() => {
     const onScroll = () => {
-      if (window.scrollY > 50) {
+      if (window.scrollY > 500) {
         setScrolled(true);
       } else {
         setScrolled(false);
@@ -21,8 +21,8 @@ const NavBar = () => {
 
     window.addEventListener('scroll', onScroll);
 
-    return window.removeEventListener('scroll', onScroll); // remove listener on unmount
-  }, []);
+    // return window.removeEventListener('scroll', onScroll); // remove listener on unmount
+  }, [scrolled]);
 
   const onUpdateActiveLink = (e) => {
     console.log(e.target.name);
@@ -72,17 +72,23 @@ const NavBar = () => {
           </Nav>
           <span className='navbar-text'>
             <div className='social-icon'>
-              <a href='#'>
+              <a
+                href='https://www.linkedin.com/in/musungwaisaac/'
+                target='_blank'
+              >
                 <img src={navIcon1} alt='social icon' />
               </a>
-              <a href='#'>
+              <a href='https://github.com/kinginthenorthcodez' target='_blank'>
                 <img src={navIcon2} alt='social icon' />
               </a>
-              <a href='#'>
+              <a href='https://twitter.com/kinthenorthcode' target='_blank'>
                 <img src={navIcon3} alt='social icon' />
               </a>
             </div>
-            <button className='vvd' onClick={() => console.log('Lets connect')}>
+            <button
+              className='vvd'
+              onClick={() => (window.location.href = '#contact')}
+            >
               <span>Let's Connect</span>
             </button>
           </span>

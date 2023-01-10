@@ -306,11 +306,11 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   /* 50%{
     /* transform: perspective(1000px) translate3d(50px, 180px, 60px); */
    
-  100%{
+  /* 100%{
     transform: rotate(0deg);
     /* transform: perspective(1500px) translate3d(50px, -180px, 360px); */
     /* transform: translateY(-20px); */
-  }
+  /*} */
 }
 
 .txt-rotate > .wrap {
@@ -459,6 +459,12 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   margin-bottom: 24px;
 }
 
+.proj-imgbx img{
+  width: auto;
+  max-width: 400px;
+  /* height: 380px;  */
+}
+
 .proj-imgbx::before {
   content: "👨🏾‍💻";
   background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
@@ -502,6 +508,42 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   font-size: 15px;
   letter-spacing: 0.8px;
 }
+
+.projBtn {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  width: 50%;
+}
+
+.modalProj {
+  color:#121212
+}
+
+.modalProj .modalTitleTx {
+ color: #AA367C;
+}
+
+.modalProj .proTitle {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1;
+}
+
+.modalProj .proImg {
+  max-width: 700px;
+  height: auto;
+}
+
+.modalProj .proDescription{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  padding: 10px 5px 0 5px;
+  letter-spacing: 0.8px;
+  line-height: 1;
+}
+
 
 .background-image-right {
   top: 20%;
