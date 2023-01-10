@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/kinginthenorthcodez.github.io/my-potifolio/static/css/main.486b80af.css",
-    "main.js": "/kinginthenorthcodez.github.io/my-potifolio/static/js/main.1f46210a.js",
+    "main.js": "/kinginthenorthcodez.github.io/my-potifolio/static/js/main.d6396a6d.js",
     "static/js/787.bf884062.chunk.js": "/kinginthenorthcodez.github.io/my-potifolio/static/js/787.bf884062.chunk.js",
     "static/media/color-sharp.png": "/kinginthenorthcodez.github.io/my-potifolio/static/media/color-sharp.bea361cfef80fefc2d1e.png",
     "static/media/color-sharp2.png": "/kinginthenorthcodez.github.io/my-potifolio/static/media/color-sharp2.c87586c6c2f549cb4aa6.png",
@@ -34,11 +34,11 @@
     "static/media/nav-icon4.svg": "/kinginthenorthcodez.github.io/my-potifolio/static/media/nav-icon4.7c2b277031fc9aeb24c033ff9332c319.svg",
     "static/media/nav-icon1.svg": "/kinginthenorthcodez.github.io/my-potifolio/static/media/nav-icon1.721d5414c26365f117e71d46b6641cb2.svg",
     "main.486b80af.css.map": "/kinginthenorthcodez.github.io/my-potifolio/static/css/main.486b80af.css.map",
-    "main.1f46210a.js.map": "/kinginthenorthcodez.github.io/my-potifolio/static/js/main.1f46210a.js.map",
+    "main.d6396a6d.js.map": "/kinginthenorthcodez.github.io/my-potifolio/static/js/main.d6396a6d.js.map",
     "787.bf884062.chunk.js.map": "/kinginthenorthcodez.github.io/my-potifolio/static/js/787.bf884062.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.486b80af.css",
-    "static/js/main.1f46210a.js"
+    "static/js/main.d6396a6d.js"
   ]
 }
