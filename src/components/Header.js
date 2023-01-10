@@ -18,16 +18,6 @@ const Header = () => {
   const [delta, setDelta] = useState(300 - Math.random() * 100);
   const period = 2000;
 
-  useEffect(() => {
-    let ticker = setInterval(() => {
-      tick();
-    }, delta);
-
-    return () => {
-      clearInterval(ticker);
-    };
-  }, [text]);
-
   const tick = () => {
     let i = counter % toRotate.length;
     let fullText = toRotate[i];
@@ -50,6 +40,16 @@ const Header = () => {
       setDelta(500);
     }
   };
+
+  useEffect(() => {
+    let ticker = setInterval(() => {
+      tick();
+    }, delta);
+
+    return () => {
+      clearInterval(ticker);
+    };
+  }, [text, delta, tick]);
 
   return (
     <section className='header' id='home'>
