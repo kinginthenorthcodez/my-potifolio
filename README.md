@@ -1,10 +1,24 @@
 
 # Potifolio WebPage
-
+☝🏾 well intended typo
 [Live Page]('')
+![img](./potifolio1.png)
 
 ## Leave me a Star when you please visit my projects, I will buy you coffe😁.
 
+## Built With
+
+- HTML 5
+- CSS
+- React
+- Media Queries
+- Flex box
+- Bootstrap
+- nodemailer
+
+## Live Demo (available)
+
+Feel free to check the [Live Demo](https://kinginthenorthcodez.github.io/North-portifolio/)
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -75,3 +89,30 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+## Authors
+
+👤 **Author1**
+
+- GitHub: [@kinginthenorthcodez](https://github.com/kinginthenorthcodez)
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](https://github.com/kinginthenorthcodez/my-potifolio/issues).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## Acknowledgments
+
+- My coding Partners
+- code Reviewers
+- google & stackoverflow
+- open source community
+
+## 📝 License
+
+This project is [MIT](./MIT.md) licensed.
