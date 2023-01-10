@@ -1,7 +1,7 @@
 
 # Potifolio WebPage
 ☝🏾 well intended typo
-[Live Page]('')
+[Live Page](' <https://kinginthenorthcodez.github.io/my-potifolio/>')
 ![img](./potifolio1.png)
 
 ## Leave me a Star when you please visit my projects, I will buy you coffe😁.
@@ -18,7 +18,7 @@
 
 ## Live Demo (available)
 
-Feel free to check the [Live Demo](https://kinginthenorthcodez.github.io/North-portifolio/)
+Feel free to check the [Live Demo]( https://kinginthenorthcodez.github.io/my-potifolio/)
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

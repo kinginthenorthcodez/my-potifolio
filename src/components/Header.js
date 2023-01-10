@@ -49,7 +49,7 @@ const Header = () => {
     return () => {
       clearInterval(ticker);
     };
-  }, [text, delta, tick]);
+  }, [text, delta]);
 
   return (
     <section className='header' id='home'>
