@@ -42,7 +42,7 @@ const NavBar = () => {
             <Nav.Link
               href='#home'
               className={
-                activeLink == 'home' ? 'active navbar-link' : 'navbar-link'
+                activeLink === 'home' ? 'active navbar-link' : 'navbar-link'
               }
               name='home'
               onClick={(e) => onUpdateActiveLink(e)}
@@ -52,7 +52,7 @@ const NavBar = () => {
             <Nav.Link
               href='#skills'
               className={
-                activeLink == 'skills' ? 'active navbar-link' : 'navbar-link'
+                activeLink === 'skills' ? 'active navbar-link' : 'navbar-link'
               }
               name='skills'
               onClick={(e) => onUpdateActiveLink(e)}
@@ -62,7 +62,7 @@ const NavBar = () => {
             <Nav.Link
               href='#project'
               className={
-                activeLink == 'projects' ? 'active navbar-link' : 'navbar-link'
+                activeLink === 'projects' ? 'active navbar-link' : 'navbar-link'
               }
               name='projects'
               onClick={(e) => onUpdateActiveLink(e)}
@@ -75,14 +75,23 @@ const NavBar = () => {
               <a
                 href='https://www.linkedin.com/in/musungwaisaac/'
                 target='_blank'
+                rel='noreferrer'
               >
-                <img src={navIcon1} alt='social icon' />
+                <img src={navIcon1} alt='linkedin icon' />
               </a>
-              <a href='https://github.com/kinginthenorthcodez' target='_blank'>
-                <img src={navIcon2} alt='social icon' />
+              <a
+                href='https://github.com/kinginthenorthcodez'
+                target='_blank'
+                rel='noreferrer'
+              >
+                <img src={navIcon2} alt='github icon' />
               </a>
-              <a href='https://twitter.com/kinthenorthcode' target='_blank'>
-                <img src={navIcon3} alt='social icon' />
+              <a
+                href='https://twitter.com/kinthenorthcode'
+                target='_blank'
+                rel='noreferrer'
+              >
+                <img src={navIcon3} alt='twitter icon' />
               </a>
             </div>
             <button

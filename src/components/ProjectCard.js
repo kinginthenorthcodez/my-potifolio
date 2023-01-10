@@ -18,7 +18,7 @@ const ProjectCard = ({ title, description, imgUrl, ...rest }) => {
     <>
       <Col sm={6} md={4}>
         <div className='proj-imgbx'>
-          <img src={imgUrl} alt='project image' />
+          <img src={imgUrl} alt='project' />
           <div className='proj-txtx'>
             <h4>{title}</h4>
             <span>{description.substring(0, 78) + '...'}</span>

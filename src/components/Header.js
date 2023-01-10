@@ -41,7 +41,7 @@ const Header = () => {
       setDelta((prevDelta) => prevDelta / 2);
     }
 
-    if (!isDeleting && upDatedText == fullText) {
+    if (!isDeleting && upDatedText === fullText) {
       setIsDeleting(true);
       setDelta(period);
     } else if (isDeleting && upDatedText === '') {

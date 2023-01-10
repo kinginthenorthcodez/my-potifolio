@@ -1,7 +1,6 @@
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import { Badge } from 'react-bootstrap';
-import proImg from '../assets/img/Airpollutionapp.png';
 
 function ProjectModal(props) {
   return (

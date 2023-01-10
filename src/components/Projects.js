@@ -166,7 +166,7 @@ const Projects = () => {
       <img
         className='background-image-right'
         src={colorSharp2}
-        alt='backround image'
+        alt='backround'
       />
     </section>
   );

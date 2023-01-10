@@ -17,14 +17,23 @@ export const Footer = () => {
               <a
                 href='https://www.linkedin.com/in/musungwaisaac/'
                 target='_blank'
+                rel='noreferrer'
               >
-                <img src={navIcon1} alt='social icon' />
+                <img src={navIcon1} alt='linkedin icon' />
               </a>
-              <a href='https://github.com/kinginthenorthcodez' target='_blank'>
-                <img src={navIcon2} alt='social icon' />
+              <a
+                href='https://github.com/kinginthenorthcodez'
+                target='_blank'
+                rel='noreferrer'
+              >
+                <img src={navIcon2} alt='gihub icon' />
               </a>
-              <a href='https://twitter.com/kinthenorthcode' target='_blank'>
-                <img src={navIcon3} alt='social icon' />
+              <a
+                href='https://twitter.com/kinthenorthcode'
+                target='_blank'
+                rel='noreferrer'
+              >
+                <img src={navIcon3} alt='twitter icon' />
               </a>
             </div>
             <p>Copyright 2023. All Rights Reserved</p>
