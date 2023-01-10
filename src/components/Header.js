@@ -68,6 +68,7 @@ const Header = () => {
                   <p>
                     🚀 🌍 I love everything binary and asynchronous plus huge
                     interest in climate change. Open to new job opportunities.
+                    -Isaac M Maqueen.
                   </p>
                   <button onClick={() => (window.location.href = '#contact')}>
                     Let's Connect{' '}
