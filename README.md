@@ -1,7 +1,7 @@
 
 # Potifolio WebPage
 ☝🏾 well intended typo
-[Live Page](' <https://kinginthenorthcodez.netlify.app>')
+[Live Page](<https://kinginthenorthcodez.netlify.app>)
 ![img](./potifolio1.png)
 
 ## Leave me a Star when you please visit my projects, I will buy you coffe😁.
