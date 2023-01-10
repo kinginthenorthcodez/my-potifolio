@@ -21,27 +21,43 @@ const Contact = () => {
       [name]: value,
     });
   };
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
+    const myForm = e.target;
+    const formData = new FormData(myForm);
+
     setButtonText('Sending...');
-    let response = await fetch('http://localhost:5000/contact', {
+    fetch('/', {
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(formDetails),
-    });
-    setButtonText('Send');
-    let result = response.json();
-    setFormDetails(initialDetails);
-    if (result.code === 200) {
-      setStatus({ success: true, message: 'Message sent Successfully!' });
-    } else {
-      setStatus({
-        success: false,
-        message: 'Something went wrong,please resubmit.',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams(formData).toString(),
+    })
+      .then((res) => {
+        console.log('DATA:', res.json());
+        setStatus({ success: true, message: 'Message sent Successfully!' });
+        setFormDetails(initialDetails);
+      })
+      .catch((error) => {
+        setStatus({
+          success: false,
+          message: 'Something went wrong,please resubmit.',
+          error: error,
+        });
       });
-    }
+    setButtonText('Send');
+
+    // let result = response.json();
+
+    // if (result.code === 200) {
+    //   setStatus({ success: true, message: 'Message sent Successfully!' });
+    // } else {
+    //   setStatus({
+    //     success: false,
+    //     message: 'Something went wrong,please resubmit.',
+    //   });
+    // }
+
+    //REMEMBER: Above code reserved for server side submission
   };
 
   return (
@@ -53,9 +69,19 @@ const Contact = () => {
           </Col>
           <Col md={6}>
             <h2>Get in touch</h2>
-            <form onSubmit={handleSubmit}>
+            <form
+              name='contact-form'
+              onSubmit={handleSubmit}
+              data-netlify='true'
+            >
               <Row>
                 <Col sm={6} className='px-1'>
+                  <input
+                    type='hidden'
+                    name='subject'
+                    value='Sales inquiry from kinginthenorthcodez.netlify.app'
+                  />
+                  <input type='hidden' name='form-name' value='contact-form' />
                   <input
                     type='text'
                     name='firstName'
@@ -114,7 +140,7 @@ const Contact = () => {
                       onFormUpdate(e.target.name, e.target.value)
                     }
                   />
-                  <button type='submit'>
+                  <button name='submit' type='submit'>
                     <span>{buttonText}</span>
                   </button>
                 </Col>
