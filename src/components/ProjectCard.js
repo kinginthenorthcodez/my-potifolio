@@ -34,7 +34,7 @@ const ProjectCard = ({ title, description, imgUrl, ...rest }) => {
             <div className='projBtn'>
               <Button
                 variant='primary'
-                onClick={(() => setModalShow(true), gaEventTracker(title))}
+                onClick={() => (setModalShow(true), gaEventTracker(title))}
               >
                 See Project
               </Button>
