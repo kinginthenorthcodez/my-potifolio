@@ -1,4 +1,4 @@
-import { Col } from 'react-bootstrap';
+import { Col, Badge } from 'react-bootstrap';
 import { useState } from 'react';
 import ProjectModal from './ProjectModal';
 import Button from 'react-bootstrap/Button';
@@ -22,6 +22,11 @@ const ProjectCard = ({ title, description, imgUrl, ...rest }) => {
           <div className='proj-txtx'>
             <h4>{title}</h4>
             <span>{description.substring(0, 78) + '...'}</span>
+            <p className='d-tags'>
+              {details.tags.map((tag) => (
+                <Badge bg='primary'>{tag}</Badge>
+              ))}
+            </p>
             <div className='projBtn'>
               <Button variant='primary' onClick={() => setModalShow(true)}>
                 See Project

@@ -63,7 +63,7 @@ const Header = () => {
                     Kinginthenorthcodez greets you!
                   </span>
                   <h1 className='txt-rotate '>
-                    Hi, I'm a <span className='wrap'>{text}</span>
+                    I'm Isaac M Maqueen, a <span className='wrap'>{text}</span>
                   </h1>
                   <p>
                     🚀 🌍 I love everything binary and asynchronous plus huge

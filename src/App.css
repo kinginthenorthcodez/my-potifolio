@@ -363,6 +363,26 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   z-index: -4;
 }
 
+/* Skills tab*/
+.skill .img-tab{
+  margin-bottom: 10px;
+  padding: 2px 0 5px 0;
+}
+.skill .lang-img img,
+.skill .frame-img img,
+.skill .tool-img img {
+  width: 100px;
+  transform: scale(1);
+  transition: 2s ease-in-out;
+}
+
+.skill .lang-img img:hover,
+.skill .frame-img img:hover,
+.skill .tool-img img:hover {
+  background-color: #fff;
+  transform: scale(2);
+}
+
 /* Project Section */
 
 .project {
@@ -387,7 +407,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   width: 56%;
 }
 
-.project .nav.nav-pills {
+/*Share same style with skills and projects*/
+.project .nav.nav-pills, .skill .nav.nav-pills {
   width: 72%;
   margin: 0 auto;
   border-radius: 50px;
@@ -395,11 +416,13 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   overflow: hidden;
 }
 
-.project .nav.nav-pills .nav-item {
+.project .nav.nav-pills .nav-item,
+.skill .nav.nav-pills .nav-item {
   width: 33.33333%;
 }
 
-.project .nav.nav-pills .nav-link {
+.project .nav.nav-pills .nav-link,
+.skill .nav.nav-pills .nav-link {
   background-color: transparent;
   border-radius: 0;
   padding: 17px 0;
@@ -414,7 +437,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   z-index: 0;
 }
 
-.project .nav.nav-pills .nav-link::before {
+.project .nav.nav-pills .nav-link::before,
+.skill .nav.nav-pills .nav-link::before {
   content: "";
   position: absolute;
   width: 0;
@@ -427,25 +451,27 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 
-.project .nav.nav-pills .nav-link.active::before {
+.project .nav.nav-pills .nav-link.active::before,
+.skill .nav.nav-pills .nav-link.active::before {
   width: 100% !important;
 }
 
-.project .nav.nav-pills .nav-link.active {
+.project .nav.nav-pills .nav-link.active,
+.skill .nav.nav-pills .nav-link.active{
   border: 1px solid rgba(255, 255, 255, 1);
 }
 
-.nav-link#projects-tabs-tab-first {
+.nav-link#projects-tabs-tab-first,.nav-link#skills-tabs-tab-first {
   border: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: 55px 0px 0px 55px;
 }
 
-.nav-link#projects-tabs-tab-second {
+.nav-link#projects-tabs-tab-second,.nav-link#skills-tabs-tab-first {
   border-top: 1px solid rgba(255, 255, 255, 0.5);
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
 }
 
-.nav-link#projects-tabs-tab-third {
+.nav-link#projects-tabs-tab-third,.nav-link#skills-tabs-tab-first {
   border: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: 0 55px 55px 0;
 }
@@ -507,12 +533,22 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   letter-spacing: 0.8px;
 }
 
+.proj-txtx .d-tags {
+  display: flex;
+  width: auto;
+  font-size: 10px;
+  justify-self: flex-start;
+  position: relative;
+  right: 0;
+  background-color: orangered;
+}
 .projBtn {
   display: flex;
   flex-direction: column;
   align-self: center;
   width: 50%;
 }
+
 
 .modalProj {
   color:#121212
@@ -551,6 +587,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   right: 0;
   z-index: -4;
 }
+
+
 
 /*Contact */
 .contact {
