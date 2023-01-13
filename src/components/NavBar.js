@@ -5,8 +5,10 @@ import logo from '../assets/img/logo2.jpg';
 import navIcon1 from '../assets/img/nav-icon1.svg';
 import navIcon2 from '../assets/img/nav-icon4.svg';
 import navIcon3 from '../assets/img/Twitter.svg';
+import useAnalyticsEventTracker from './useAnalyticsEventTracker';
 
 const NavBar = () => {
+  const gaEventTracker = useAnalyticsEventTracker('Contact me');
   const [activeLink, setActiveLink] = useState('home');
   const [scrolled, setScrolled] = useState(false);
 
@@ -96,7 +98,9 @@ const NavBar = () => {
             </div>
             <button
               className='vvd'
-              onClick={() => (window.location.href = '#contact')}
+              onClick={() => (
+                (window.location.href = '#contact'), gaEventTracker('call')
+              )}
             >
               <span>Let's Connect</span>
             </button>
