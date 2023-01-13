@@ -50,8 +50,8 @@ const Projects = () => {
         'LOCAL FORAGE API',
       ],
       imgUrl: proImg3,
-      liveLink: 'https://space-watch.netlify.app/',
-      sourceLink: 'https://github.com/kinginthenorthcodez/space-watch',
+      liveLink: '',
+      sourceLink: '',
     },
     {
       id: 4,
@@ -107,7 +107,7 @@ const Projects = () => {
         'The Bookstore is a React-Redux application connected to an existing API to create and remove books in a remote server. Users can Display the list of books, Add and Remove a selected book..',
       tags: ['HTML', 'CSS', 'JavaScript', 'React', 'Redux'],
       imgUrl: proImg5,
-      liveLink: 'https://github.com/kinginthenorthcodez/bookstore',
+      liveLink: '',
       sourceLink: 'https://github.com/kinginthenorthcodez/bookstore',
     },
     {

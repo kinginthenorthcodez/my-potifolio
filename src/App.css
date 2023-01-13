@@ -658,7 +658,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 .contact form button:hover {
-  color: #fff;
+  color: #fff !important;
 }
 
 .contact form button::before {
@@ -675,8 +675,15 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 .contact form button:hover::before {
   width: 100%;
+  color: #fff;
 }
 
+.my-note{
+  background-color: #fff;
+  color: orangered;
+  font-weight: 700;
+  font-size: 24px;
+}
 /*Footer*/
 
 .footer {

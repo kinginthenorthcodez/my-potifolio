@@ -1,64 +1,20 @@
-import { useState } from 'react';
+import { useForm, ValidationError } from '@formspree/react';
 import { Col, Container, Row } from 'react-bootstrap';
 import contactImg from '../assets/img/contact-img.svg';
 
 const Contact = () => {
-  const initialDetails = {
-    firstName: '',
-    lastName: '',
-    email: '',
-    phone: '',
-    message: '',
-  };
+  const [state, handleSubmit] = useForm('mwkjkgyr');
 
-  const [formDetails, setFormDetails] = useState(initialDetails);
-  const [buttonText, setButtonText] = useState('Send');
-  const [status, setStatus] = useState({});
-
-  const onFormUpdate = (name, value) => {
-    setFormDetails({
-      ...formDetails,
-      [name]: value,
-    });
-  };
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    const myForm = e.target;
-    const formData = new FormData(myForm);
-
-    setButtonText('Sending...');
-    fetch('/', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: new URLSearchParams(formData).toString(),
-    })
-      .then((res) => {
-        console.log('DATA:', res.json());
-        setStatus({ success: true, message: 'Message sent Successfully!' });
-        setFormDetails(initialDetails);
-      })
-      .catch((error) => {
-        setStatus({
-          success: false,
-          message: 'Something went wrong,please resubmit.',
-          error: error,
-        });
-      });
-    setButtonText('Send');
-
-    // let result = response.json();
-
-    // if (result.code === 200) {
-    //   setStatus({ success: true, message: 'Message sent Successfully!' });
-    // } else {
-    //   setStatus({
-    //     success: false,
-    //     message: 'Something went wrong,please resubmit.',
-    //   });
-    // }
-
-    //REMEMBER: Above code reserved for server side submission
-  };
+  if (state.succeeded) {
+    return (
+      <>
+        <div className='my-note'> Thank you, will get in touch shortly!</div>
+        {setTimeout(() => {
+          window.location.reload();
+        }, 3000)}
+      </>
+    );
+  }
 
   return (
     <section className='contact' id='contact'>
@@ -87,10 +43,11 @@ const Contact = () => {
                     name='firstName'
                     id='firstName'
                     placeholder='firstName:'
-                    value={formDetails.firstName}
-                    onChange={(e) =>
-                      onFormUpdate(e.target.name, e.target.value)
-                    }
+                  />
+                  <ValidationError
+                    field='firstName'
+                    prefix='firstName'
+                    errors={state.errors}
                   />
                 </Col>
                 <Col sm={6} className='px-1'>
@@ -99,10 +56,13 @@ const Contact = () => {
                     name='lastName'
                     id='lastName'
                     placeholder='lastName:'
-                    value={formDetails.lastName}
-                    onChange={(e) =>
-                      onFormUpdate(e.target.name, e.target.value)
-                    }
+                    required
+                  />
+                  <ValidationError
+                    field='lastName'
+                    prefix='lastName'
+                    errors={state.errors}
+                    required
                   />
                 </Col>
                 <Col sm={6} className='px-1'>
@@ -111,10 +71,12 @@ const Contact = () => {
                     name='email'
                     id='email'
                     placeholder='email:'
-                    value={formDetails.email}
-                    onChange={(e) =>
-                      onFormUpdate(e.target.name, e.target.value)
-                    }
+                    required
+                  />
+                  <ValidationError
+                    field='email'
+                    prefix='Email'
+                    errors={state.errors}
                   />
                 </Col>
                 <Col sm={6} className='px-1'>
@@ -123,10 +85,11 @@ const Contact = () => {
                     name='phone'
                     id='phone'
                     placeholder='Phone No:'
-                    value={formDetails.phone}
-                    onChange={(e) =>
-                      onFormUpdate(e.target.name, e.target.value)
-                    }
+                  />
+                  <ValidationError
+                    field='phone'
+                    prefix='Phone'
+                    errors={state.errors}
                   />
                 </Col>
                 <Col>
@@ -135,24 +98,26 @@ const Contact = () => {
                     name='message'
                     id='message'
                     placeholder='Message:'
-                    value={formDetails.message}
-                    onChange={(e) =>
-                      onFormUpdate(e.target.name, e.target.value)
-                    }
+                    required
                   />
-                  <button name='submit' type='submit'>
-                    <span>{buttonText}</span>
+                  <ValidationError
+                    field='message'
+                    prefix='Message'
+                    errors={state.errors}
+                  />
+                  <button
+                    name='submit'
+                    type='submit'
+                    disabled={state.submitting}
+                  >
+                    {state.submitting ? 'Sending' : 'send'}
                   </button>
                 </Col>
-                {status.message && (
+                {state.succeeded && (
                   <Col>
-                    <p
-                      className={
-                        status.success === false ? 'danger' : 'success'
-                      }
-                    >
-                      {status.message}
-                    </p>
+                    <div className='success'>
+                      <p>Form recieved!</p>
+                    </div>
                   </Col>
                 )}
               </Row>
