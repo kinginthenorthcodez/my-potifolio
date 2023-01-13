@@ -520,7 +520,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 } 
 
 .proj-txtx h4 {
-  font-size: 30px;
+  font-size: 24px;
   font-weight: 700;
   letter-spacing: 0.8px;
   line-height: 1.1em;
@@ -529,17 +529,17 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .proj-txtx span {
   font-style: italic;
   font-weight: 400;
-  font-size: 15px;
-  letter-spacing: 0.8px;
+  font-size: 12px;
+  letter-spacing: 0.5px;
 }
 
 .proj-txtx .d-tags {
   display: flex;
   width: auto;
   font-size: 10px;
-  justify-self: flex-start;
-  position: relative;
   right: 0;
+  margin-top: 2px;
+  margin-bottom: 3px;
   background-color: orangered;
 }
 .projBtn {

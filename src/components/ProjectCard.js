@@ -26,7 +26,9 @@ const ProjectCard = ({ title, description, imgUrl, ...rest }) => {
             <span>{description.substring(0, 78) + '...'}</span>
             <p className='d-tags'>
               {details.tags.map((tag) => (
-                <Badge bg='primary'>{tag}</Badge>
+                <span>
+                  <Badge bg='primary'>{tag}</Badge>
+                </span>
               ))}
             </p>
             <div className='projBtn'>
