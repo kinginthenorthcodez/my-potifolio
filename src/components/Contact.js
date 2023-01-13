@@ -1,8 +1,10 @@
 import { useForm, ValidationError } from '@formspree/react';
 import { Col, Container, Row } from 'react-bootstrap';
 import contactImg from '../assets/img/contact-img.svg';
+import useAnalyticsEventTracker from './useAnalyticsEventTracker';
 
 const Contact = () => {
+  const gaEventTracker = useAnalyticsEventTracker('Form submission');
   const [state, handleSubmit] = useForm('mwkjkgyr');
 
   if (state.succeeded) {
@@ -109,6 +111,7 @@ const Contact = () => {
                     name='submit'
                     type='submit'
                     disabled={state.submitting}
+                    onClick={() => gaEventTracker('form-submit')}
                   >
                     {state.submitting ? 'Sending' : 'send'}
                   </button>

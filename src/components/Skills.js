@@ -9,8 +9,10 @@ import colorSharp from '../assets/img/color-sharp.png';
 import Language from './Language';
 import Framework from './Framework';
 import Tool from './Tool';
+import useAnalyticsEventTracker from './useAnalyticsEventTracker';
 
 const Skills = () => {
+  const gaEventTracker = useAnalyticsEventTracker('Skills view');
   const responsive = {
     superLargeDesktop: {
       // the naming can be any, depends
@@ -31,7 +33,11 @@ const Skills = () => {
     },
   };
   return (
-    <section className='skill' id='skills'>
+    <section
+      className='skill'
+      id='skills'
+      onClick={() => gaEventTracker('skills')}
+    >
       <Container>
         <Row>
           <Col>

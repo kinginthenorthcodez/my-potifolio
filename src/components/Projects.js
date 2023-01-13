@@ -9,11 +9,13 @@ import proImg6 from '../assets/img/leaderboard.png';
 import proImg7 from '../assets/img/recipeapp.png';
 import proImg8 from '../assets/img/potifolio1.png';
 import proImg9 from '../assets/img/space-watch.png';
+import useAnalyticsEventTracker from './useAnalyticsEventTracker';
 
 import colorSharp2 from '../assets/img/color-sharp2.png';
 import ProjectCard from './ProjectCard';
 
 const Projects = () => {
+  const gaEventTracker = useAnalyticsEventTracker('Projects-view');
   const projects = [
     {
       id: 1,
@@ -122,7 +124,11 @@ const Projects = () => {
     },
   ];
   return (
-    <section className='project' id='project'>
+    <section
+      className='project'
+      id='project'
+      onClick={() => gaEventTracker('projects')}
+    >
       <Container>
         <Row>
           <Col>

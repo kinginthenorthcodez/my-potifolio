@@ -2,8 +2,10 @@ import { Col, Badge } from 'react-bootstrap';
 import { useState } from 'react';
 import ProjectModal from './ProjectModal';
 import Button from 'react-bootstrap/Button';
+import useAnalyticsEventTracker from './useAnalyticsEventTracker';
 
 const ProjectCard = ({ title, description, imgUrl, ...rest }) => {
+  const gaEventTracker = useAnalyticsEventTracker('Project-details view');
   const [modalShow, setModalShow] = useState(false);
   const details = {
     id: rest.id,
@@ -28,7 +30,10 @@ const ProjectCard = ({ title, description, imgUrl, ...rest }) => {
               ))}
             </p>
             <div className='projBtn'>
-              <Button variant='primary' onClick={() => setModalShow(true)}>
+              <Button
+                variant='primary'
+                onClick={(() => setModalShow(true), gaEventTracker(title))}
+              >
                 See Project
               </Button>
             </div>
