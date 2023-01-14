@@ -52,7 +52,7 @@ const Projects = () => {
         'LOCAL FORAGE API',
       ],
       imgUrl: proImg3,
-      liveLink: 'contacts-tracker.netlify.app',
+      liveLink: 'https://contacts-tracker.netlify.app/',
       sourceLink: 'https://github.com/kinginthenorthcodez/contacts-tracker-app',
     },
     {
